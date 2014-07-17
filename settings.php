@@ -144,7 +144,7 @@ if(!class_exists('WP_igniter_Settings'))
             <ul style="list-style:initial;list-style-position:inside;">
             <li>Engage CodeIgniter content into your blog by inserting the [wordpressigniter] shortcode into pages.</li>
             <li>Check the &quot;Trigger with [wordpressigniter] shortcode in posts, too&quot; box so that CI content shows in posts. (Most useful with the shortcode after the "read more" tag.)</li>
-            <li>Page Override setting is deprecated and will disappear in future versions.</li>
+            <li>Page Override setting is deprecated and will disappear in future versions. Leave this blank and use the [wordpressigniter] shortcode instead.</li>
             <li>The CI Path points to CI's index.php front controller.</li>
             <li>The CI Path can be relative, but depending on your server settings, but you may need to edit the CI's index.php if you choose to use CI's index.php to generate constants.</li>
             <ul>

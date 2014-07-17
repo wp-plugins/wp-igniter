@@ -256,12 +256,11 @@ if(!class_exists('WP_Igniter')) {
  		
 		public function main_content($content) {
 			global $wp_query, $CI_OUTPUT;
+
+			// check for the shortcode: (I know this isn't EXACTLY the wordpress way of doing shortcodes)
 			$shortcode_found = strpos($content, '[wordpressigniter]');
 			
-			// check for the shortcode:
-			
-			
-			// not a page, but also not shortcoding posts and not finding a shortcode
+			// not a page, and, BOTH 1. not shortcoding posts, and 2. not finding a shortcode
 			if(!$wp_query->is_page && !get_option('wp_igniter_shortcode_posts') && $shortcode_found !== false) {
 				return $content;
 			}
@@ -278,7 +277,7 @@ if(!class_exists('WP_Igniter')) {
 				
 			}
 			
-			// try for a shortcode: (I know this isn't EXACTLY the wordpress way of doing)
+			// use the shortcode:
 			else if($shortcode_found === false) {
 				return $content;
 			}
